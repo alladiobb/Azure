@@ -30,6 +30,19 @@ IPADDRESS= "$(az vm list-ip-addresses
 --query "[].virtualMachine.network.publicIpAddresses[*].ipAddress"
 --output tsv)"
 
+#imprimindo o valor da variável
+echo $IPADDRESS       
+
 #baixando a home page
 curl --connect-timeout 5 http://$IPADDRESS
 
+#Listar os grupos de segurança de rede que estão associados a VM
+az network nsg list 
+--resource-group "learn-686f7a41-2cc9-4753-8d69-fd6abc65e1f3"
+--query '[].name'
+--output tsv
+
+#Listar as regras associadas ao NSG
+az network nsg rule list 
+--resource-group "learn-686f7a41-2cc9-4753-8d69-fd6abc65e1f3"
+--nsg-name my-vmNSG
