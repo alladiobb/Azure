@@ -1,0 +1,28 @@
+Ponto de extremidade
+    Armazenamento de Blobs 	https://<storage-account-name>.blob.core.windows.net
+    Data Lake Storage Gen2 	https://<storage-account-name>.dfs.core.windows.net
+    Arquivos do Azure 	https://<storage-account-name>.file.core.windows.net
+    Armazenamento de Filas 	https://<storage-account-name>.queue.core.windows.net
+    Armazenamento de Tabelas 	https://<storage-account-name>.table.core.windows.net
+
+
+Redundancia
+    LRS (armazenamento com redundância local)
+    ZRS (armazenamento com redundância de zona)
+    GRS (Armazenamento com redundância geográfica) 
+    RA-GRS (armazenamento com redundância geográfica com acesso de leitura)
+    GZRS (Armazenamento com redundância de zona geográfica) 
+    RA-GZRS (armazenamento com redundância de zona geográfica com acesso de leitura)
+
+Serviços de dados
+    Blobs do Azure: um repositório de objetos altamente escalonável para texto e dados binários. Ela também inclui suporte para análise de Big Data por meio do Data Lake Storage Gen2.
+    Arquivos do Azure: compartilhamentos de arquivos gerenciados para implantações locais e em nuvem.
+    Filas do Azure: um armazenamento de mensagens para um sistema de mensagens confiável entre componentes do aplicativo.
+    Azure Disks: volumes de armazenamento em nível de bloco para VMs do Azure.
+    Tabelas do Azure: opção de tabela NoSQL para dados estruturados e não relacionais.
+
+
+Identificar opções para mover arquivos, incluindo o AzCopy, o Gerenciador de Armazenamento do Azure e a Sincronização de Arquivos de Azure
+
+Descrever as opções de migração. incluindo as Migrações para Azure e o Azure Data Box
+
