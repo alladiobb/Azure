@@ -17,3 +17,19 @@ az vm extension set
 --settings '{"fileUris":["https://raw.githubusercontent.com/MicrosoftDocs/mslearn-welcome-to-azure/master/configure-nginx.sh"]}' 
 --protected-settings '{"commandToExecute": "./configure-nginx.sh"}'
 
+
+#Verificar as VMs criadas
+az vm list
+
+az vm list-ip-addresses
+
+#guadar resultado em uma variável Bash 
+IPADDRESS= "$(az vm list-ip-addresses 
+--resource-group "learn-686f7a41-2cc9-4753-8d69-fd6abc65e1f3"
+--name my-vm 
+--query "[].virtualMachine.network.publicIpAddresses[*].ipAddress"
+--output tsv)"
+
+#baixando a home page
+curl --connect-timeout 5 http://$IPADDRESS
+
